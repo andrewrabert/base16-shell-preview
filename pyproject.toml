@@ -1,0 +1,34 @@
+[project]
+name = "base16-shell-preview"
+dynamic = ["version"]
+description = "Browse and preview Base16 Shell themes in your terminal."
+readme = "README.md"
+authors = [
+    {name = "Andrew Rabert", email = "ar@nullsum.net"},
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: End Users/Desktop",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+]
+requires-python = ">=3.6"
+license = {text = "MIT"}
+
+[project.urls]
+Homepage = "https://github.com/nvllsvm/base16-shell-preview"
+
+[project.scripts]
+base16-shell-preview = "base16_shell_preview:main"
+
+[build-system]
+requires = ["hatchling", "hatch-vcs"]
+build-backend = "hatchling.build"
+
+[tool.hatch.version]
+source = "vcs"
+
+[tool.hatch.build.targets.wheel]
+
+[dependency-groups]
+dev = []
