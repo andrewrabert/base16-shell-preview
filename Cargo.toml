@@ -1,0 +1,14 @@
+[package]
+name = "base16-shell-preview"
+version = "2.0.0"
+edition = "2024"
+description = "Browse and preview Base16 Shell themes in your terminal."
+license = "MIT"
+authors = ["Andrew Rabert <ar@nullsum.net>"]
+repository = "https://github.com/nvllsvm/base16-shell-preview"
+
+[dependencies]
+clap = { version = "4", features = ["derive"] }
+crossterm = "0.29"
+ratatui = "0.30"
+signal-hook = "0.3"

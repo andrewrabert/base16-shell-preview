@@ -1,5 +1,8 @@
 # Changelog
 
+## 2.0.0
+- Rewrite in Rust
+
 ## 1.1.0 (2025-02-12)
 - Add `-l`, `--list` option to print themes and exit
 - Add optional positional argument to set current theme and exit

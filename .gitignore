@@ -1,11 +1,1 @@
-*.egg-info/
-*.pyc
-.cache
-.coverage
-.coverage.*
-.eggs
-__pycache__/
-build/
-dist/
-env/
-htmlcov/
+/target
