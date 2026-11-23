@@ -11,6 +11,7 @@ import sys
 __version__ = '1.1.0'
 
 THEME_PATH = pathlib.Path('~/.base16_theme').expanduser()
+FISH_THEME_PATH = pathlib.Path('~/.base16_theme.fish').expanduser()
 
 SHELL = '/bin/sh'
 
@@ -35,6 +36,15 @@ class Theme:
         except FileNotFoundError:
             pass
         THEME_PATH.symlink_to(self.path)
+
+        try:
+            FISH_THEME_PATH.unlink()
+        except FileNotFoundError:
+            pass
+        fish_path = self.path.parent.parent.joinpath(
+            'fish', f'{self.path.stem}.fish')
+        if fish_path.is_file():
+            FISH_THEME_PATH.symlink_to(fish_path)
 
         hooks_dir = os.environ.get('BASE16_SHELL_HOOKS')
         if hooks_dir is not None:
